@@ -1,0 +1,10 @@
+# Development profile for logging-service
+server:
+  port: 8082
+spring:
+  application:
+    name: logging-service
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-service:8761/eureka/

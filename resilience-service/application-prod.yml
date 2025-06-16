@@ -1,0 +1,10 @@
+# Production profile for resilience-service
+server:
+  port: 8084
+spring:
+  application:
+    name: resilience-service
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-service:8761/eureka/
