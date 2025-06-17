@@ -1,1 +1,0 @@
-As of Spring Boot 2.4+, bootstrap.yml has been replaced by the spring.config.import mechanism in application.yml.
