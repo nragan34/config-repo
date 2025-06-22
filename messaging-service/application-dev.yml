@@ -1,0 +1,6 @@
+# Development profile for messaging-service
+server:
+  port: 8083
+spring:
+  application:
+    name: messaging-service
