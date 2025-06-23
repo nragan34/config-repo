@@ -7,7 +7,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          secret-key: mySecretKey1234567890
+          secret: mySecretKey1234567890
 eureka:
   client:
     serviceUrl:
