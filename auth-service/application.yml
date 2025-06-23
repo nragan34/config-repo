@@ -12,3 +12,5 @@ management:
     web:
       exposure:
         include: health,env
+jwt:
+  secret-key: mySecretKey1234567890
