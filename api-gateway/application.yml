@@ -7,7 +7,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          secret-key: mySecretKey1234567890 # Must match the auth-service secret
+          jwk-set-uri: http://auth-service:8081/.well-known/jwks.json # Use RSA public key endpoint
 eureka:
   client:
     serviceUrl:
