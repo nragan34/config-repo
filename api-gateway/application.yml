@@ -3,6 +3,11 @@ server:
 spring:
   application:
     name: api-gateway
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          secret-key: mySecretKey1234567890
 eureka:
   client:
     serviceUrl:

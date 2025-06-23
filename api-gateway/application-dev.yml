@@ -1,6 +1,9 @@
-# Development profile for api-gateway
-server:
-  port: 8080
 spring:
-  application:
-    name: api-gateway
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          secret-key: mySecretKey1234567890 # Must match the auth-service secret
+
+# Allow unauthenticated access to /api/v1/auth/** and /api/v1/public/**
+# Secure all other endpoints by default
