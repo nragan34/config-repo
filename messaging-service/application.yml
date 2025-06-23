@@ -1,8 +1,13 @@
 server:
-  port: 8083
+  port: 8091
 spring:
   application:
     name: messaging-service
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://auth-service:8081/.well-known/jwks.json
 eureka:
   client:
     serviceUrl:
