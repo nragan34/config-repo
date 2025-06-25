@@ -7,11 +7,11 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: http://auth-service:8081/.well-known/jwks.json # Use RSA public key endpoint
+          jwk-set-uri: '${JWK_SET_URI:http\://auth-service\:8081/.well-known/jwks.json}' # Use RSA public key endpoint
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://discovery-service:8761/eureka/
+      defaultZone: '${EUREKA_DEFAULT_ZONE:http\://discovery-service\:8761/eureka/}'
 management:
   endpoints:
     web:

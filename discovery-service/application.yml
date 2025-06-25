@@ -2,6 +2,8 @@ server:
   port: 8761
 eureka:
   client:
+    registry-fetch-interval-seconds: 10
+    initial-instance-info-replication-interval-seconds: 10
     registerWithEureka: false
     fetchRegistry: false
 management:
@@ -9,3 +11,7 @@ management:
     web:
       exposure:
         include: health,env
+logging:
+  level:
+    com.netflix.discovery: ERROR
+    com.netflix.eureka: ERROR
