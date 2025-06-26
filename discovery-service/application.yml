@@ -4,8 +4,8 @@ eureka:
   client:
     registry-fetch-interval-seconds: 10
     initial-instance-info-replication-interval-seconds: 10
-    registerWithEureka: false
-    fetchRegistry: false
+#    registerWithEureka: false
+#    fetchRegistry: false
 management:
   endpoints:
     web:
