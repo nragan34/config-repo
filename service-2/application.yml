@@ -3,7 +3,7 @@ server:
 spring:
   application:
     name: service-2
-.  security:
+  security:
     oauth2:
       resourceserver:
         jwt:
