@@ -1,14 +1,23 @@
 server:
   port: 8081
+
 spring:
   application:
     name: auth-service
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: '${EUREKA_DEFAULT_ZONE:http://discovery-service:8761/eureka/}'
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,env
+  security:
+    user:
+      name: ${AUTH_SERVICE_USERNAME:admin}
+      password: ${AUTH_SERVICE_PASSWORD:admin}
+      roles: USER,ADMIN
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${JWT_ISSUER_URI:http://auth-service:8081}
+
+# JWT configuration specific to auth-service
+jwt:
+  secret: ${JWT_SECRET:default_d3f4ult_s3cr3t_k3y_sh0uld_b3_ch4ng3d_1n_pr0duct10n}
+  expiration: 86400  # 24 hours in seconds
+  issuer: auth-service
+  header: Authorization
+  prefix: Bearer

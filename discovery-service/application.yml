@@ -1,17 +1,18 @@
 server:
   port: 8761
-#eureka:
-#  client:
-#    registry-fetch-interval-seconds: 10
-#    initial-instance-info-replication-interval-seconds: 10
-#    registerWithEureka: false
-#    fetchRegistry: false
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,env
-#logging:
-#  level:
-#    com.netflix.discovery: ERROR
-#    com.netflix.eureka: ERROR
+
+spring:
+  application:
+    name: discovery-service
+
+# Discovery service specific settings
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+
+# Override logging for noisy Eureka components
+logging:
+  level:
+    com.netflix.discovery: ERROR
+    com.netflix.eureka: ERROR

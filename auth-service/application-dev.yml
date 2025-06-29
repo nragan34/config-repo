@@ -1,1 +1,8 @@
-# Development profile for auth-service
+# JWT with shorter expiration for development
+jwt:
+  expiration: 3600  # 1 hour for development
+
+# Service-specific logging levels
+logging:
+  level:
+    com.example.authservice: DEBUG
