@@ -1,6 +1,10 @@
 # Production profile for auth-service
 # Only includes auth-service specific production settings
-
+# Performance tuning for service-3 in production
+tomcat:
+  max-threads: 300
+  accept-count: 200
+  connection-timeout: 30000
 # SSL specific configuration for the auth service
 server:
   ssl:

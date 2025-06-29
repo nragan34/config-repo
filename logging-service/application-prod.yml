@@ -1,6 +1,10 @@
-# Production profile for logging-service
+# Performance tuning for service-3 in production
+tomcat:
+  max-threads: 300
+  accept-count: 200
+  connection-timeout: 30000
 server:
-  port: 8082
-spring:
-  application:
-    name: logging-service
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain
+    min-response-size: 1024
