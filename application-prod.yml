@@ -19,7 +19,7 @@ server:
     connection-timeout: 20000
   shutdown: graceful
 
-# Restricted management endpoints for production
+# Common management endpoints configuration
 management:
   endpoints:
     web:
@@ -28,6 +28,16 @@ management:
   endpoint:
     health:
       show-details: when_authorized
+      probes:
+        enabled: true
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true
+  info:
+    env:
+      enabled: true
 
 # More restrictive CORS for production
 cors:
