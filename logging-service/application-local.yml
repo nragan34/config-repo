@@ -1,0 +1,8 @@
+# ...existing code...
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+# ...existing code...
+
